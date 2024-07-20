@@ -17,8 +17,8 @@ For notifications, use the paid or self hosted ntfy instance.
 ## Installation
 Download script to your home directory
 ```bash
-wget https://github.com/hhanzo1/update-ufw-rule/blob/main/update-ufw-ssh.sh
-chmod +x update-ufw-ssh.sh
+wget https://github.com/hhanzo1/update-ufw-rule/blob/main/update-ufw-rule.sh
+chmod +x update-ufw-rule.sh
 ```
 
 Update the following variables:
@@ -33,7 +33,7 @@ Run the script manually to check it is working as expected, then scheduled via c
 ## Enable the update script
 ```bash
 # Run every day
-0 * * * * /home/[USERID]/update-ufw-ssh.sh
+0 * * * * /home/[USERID]/update-ufw-rule.sh
 ```
 There will be a ntfy push notification every time the update script is run.
 # Acknowledgments
