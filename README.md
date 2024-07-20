@@ -38,4 +38,4 @@ Run the script manually to check it is working as expected, then scheduled via c
 There will be a ntfy push notification every time the update script is run.
 # Acknowledgments
 * [ufw](https://manpages.ubuntu.com/manpages/jammy/en/man8/ufw.8.html)
-* [ntfy]((https://ntfy.sh/)
+* [ntfy](https://ntfy.sh/)
