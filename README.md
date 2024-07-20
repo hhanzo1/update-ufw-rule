@@ -28,6 +28,18 @@ NTFY_AUTH_TOKEN=
 NTFY_TOPIC=
 
 Replace ntfy.sh with your self hosted ntfy URL.
+
+If the ntfy CLI is not installed on the local host, update the ntfy notification functions to use [curl](https://docs.ntfy.sh/publish/#__tabbed_1_1) instead.
+
+```bash
+    #ntfy publish --token "$NTFY_AUTH_TOKEN" --tags="$NTFY_MESSAGE_FAILURE_TAG" "ntfy.sh/$NTFY_TOPIC" "$message"
+    curl -X POST \
+      -H "Authorization: Bearer $NTFY_AUTH_TOKEN" \
+      -H "Priority: high" \
+      -H "Tags: $NTFY_MESSAGE_FAILURE_TAG" \
+      -d "$message" \
+      https://ntfy.sh/DFqxU8kU2HYyX25N
+```
 # Usage
 Run the script manually to check it is working as expected, then scheduled via cron.
 ## Enable the update script
